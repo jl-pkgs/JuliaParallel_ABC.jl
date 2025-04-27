@@ -42,7 +42,7 @@ bsub -J kongdd_m01 \
      -e log_all.err \
      -n $cpus \
      -R "span[ptile=$cpus_per_node]" \
-     mpiexecjl -n $nodes -ppn 1 julia -t $cpus_per_node s1_hello.jl
+     mpiexecjl -n $nodes -ppn 1 julia -t $cpus_per_node ex1_Threads.jl
 ```
 
 ## 3 查看任务进度
